@@ -16,6 +16,11 @@ HTMLWidgets.widget({
           .data(x.data)
           .width(width)
           .maxHeight(height)
+          .maxLineHeight(x.options.maxLineHeight)
+          .leftMargin(x.options.margins.left)
+          .rightMargin(x.options.margins.right)
+          .bottomMargin(x.options.margins.bottom)
+          .topMargin(x.options.margins.top)
           (document.getElementById(el.id));
 
       },

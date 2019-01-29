@@ -8,7 +8,16 @@
 timelines <- function(data, line_height = 12, width = NULL, height = NULL, element_id = NULL) {
 
   config = list(
-    data = data
+    data = data,
+    options = list(
+      maxLineHeight = line_height,
+      margins = list(
+        left = 90,
+        right = 100,
+        top = 26,
+        bottom = 30
+      )
+    )
   )
 
   htmlwidgets::createWidget(
