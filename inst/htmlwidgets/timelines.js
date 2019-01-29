@@ -21,6 +21,9 @@ HTMLWidgets.widget({
           .rightMargin(x.options.margins.right)
           .bottomMargin(x.options.margins.bottom)
           .topMargin(x.options.margins.top)
+          .zQualitative(x.options.scale.qualitative)
+          .zDataLabel(x.options.scale.data_label)
+          .zScaleLabel(x.options.scale.label)
           (document.getElementById(el.id));
 
       },

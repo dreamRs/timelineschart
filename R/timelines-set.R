@@ -14,3 +14,17 @@ set_margins <- function(timevis, left = 90, right = 100, bottom = 26, top = 30) 
 }
 
 
+#' Set scale for \code{timelines-chart}
+#'
+#' @param timevis A \code{timelines-chart} \code{htmlwidget} object.
+#' @param qualitative Whether the segment data color values are categorical (false) or quantitative (true).
+#' @param data_label Units of z data. Used in the tooltip descriptions.
+#' @param label Color scale label. Only applicable to quantitative z scales.
+#'
+#' @export
+#'
+set_scale <- function(timevis, qualitative = FALSE, data_label = "", label = "") {
+  .timelines_opt(timevis, "scale", qualitative = qualitative, data_label = data_label, label = label)
+}
+
+

@@ -16,6 +16,11 @@ timelines <- function(data, line_height = 12, width = NULL, height = NULL, eleme
         right = 100,
         top = 26,
         bottom = 30
+      ),
+      scale = list(
+        qualitative = FALSE,
+        data_label = "",
+        label = ""
       )
     )
   )
