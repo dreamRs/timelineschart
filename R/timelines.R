@@ -18,7 +18,9 @@ timelines <- function(data, line_height = 12, width = NULL, height = NULL, eleme
         bottom = 30
       ),
       scale = list(
-        qualitative = FALSE,
+        palette = "Viridis",
+        domain = c(0, 1),
+        discrete = FALSE,
         data_label = "",
         label = ""
       )

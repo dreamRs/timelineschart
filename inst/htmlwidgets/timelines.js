@@ -10,6 +10,9 @@ HTMLWidgets.widget({
 
       renderValue: function(x) {
 
+        var colorScale = d3.scaleSequential(d3['interpolate' + x.options.scale.palette])
+          .domain(x.options.scale.domain);
+
         const timelinesWidget = TimelinesChart();
 
         timelinesWidget
@@ -21,9 +24,10 @@ HTMLWidgets.widget({
           .rightMargin(x.options.margins.right)
           .bottomMargin(x.options.margins.bottom)
           .topMargin(x.options.margins.top)
-          .zQualitative(x.options.scale.qualitative)
+          .zQualitative(x.options.scale.discrete)
           .zDataLabel(x.options.scale.data_label)
           .zScaleLabel(x.options.scale.label)
+          .zColorScale(colorScale)
           (document.getElementById(el.id));
 
       },

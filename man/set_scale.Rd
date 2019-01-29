@@ -4,12 +4,17 @@
 \alias{set_scale}
 \title{Set scale for \code{timelines-chart}}
 \usage{
-set_scale(timevis, qualitative = FALSE, data_label = "", label = "")
+set_scale(timevis, discrete = FALSE, palette = "Viridis",
+  domain = c(0, 1), data_label = "", label = "")
 }
 \arguments{
 \item{timevis}{A \code{timelines-chart} \code{htmlwidget} object.}
 
-\item{qualitative}{Whether the segment data color values are categorical (false) or quantitative (true).}
+\item{discrete}{Whether the segment data color values are categorical (false) or continuouss (true).}
+
+\item{palette}{Color palette to use for continuous or colors vector.}
+
+\item{domain}{Range of values for continuous data.}
 
 \item{data_label}{Units of z data. Used in the tooltip descriptions.}
 
