@@ -23,15 +23,15 @@ set_margins <- function(timelines, left = 90, right = 100, bottom = 26, top = 30
 #' Set scale for \code{timelines-chart}
 #'
 #' @param timelines A \code{timelines-chart} \code{htmlwidget} object.
-#' @param discrete Whether the segment data color values are categorical (false) or continuouss (true).
 #' @param palette Color palette to use for continuous or colors vector.
 #' @param domain Range of values for continuous data.
+#' @param discrete Whether the segment data color values are categorical (false) or continuouss (true).
 #' @param data_label Units of z data. Used in the tooltip descriptions.
 #' @param label Color scale label. Only applicable to quantitative z scales.
 #'
 #' @export
 #'
-set_scale <- function(timelines, discrete = FALSE, palette = "Viridis", domain = c(0, 1), data_label = "", label = "") {
+set_scale <- function(timelines, palette = "Viridis", domain = c(0, 1), discrete = FALSE, data_label = "", label = "") {
   .timelines_opt(
     timelines, "scale",
     discrete = discrete,

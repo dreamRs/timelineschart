@@ -28,7 +28,8 @@ timelines <- function(data, line_height = 12, width = NULL, height = NULL, eleme
     if (!all(c("group", "label", "start", "end", "value") %in% names(data)))
       stop("data must contains columns: group, label, start, end, value", call. = FALSE)
     is_discrete <- !is.numeric(data$value)
-    domain <- range(pretty(range(data$value, na.rm = TRUE)))
+    if (!is_discrete)
+      domain <- range(pretty(range(data$value, na.rm = TRUE)))
     data <- parse_data(data)
 
   }

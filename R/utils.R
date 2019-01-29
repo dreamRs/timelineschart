@@ -61,7 +61,7 @@ parse_data <- function(data) {
             list(
               label = y,
               data = lapply(
-                X = seq_along(nrow(dat_label)),
+                X = seq_len(nrow(dat_label)),
                 FUN = function(z) {
                   list(
                     timeRange = c(dat_label$start[z], dat_label$end[z]),

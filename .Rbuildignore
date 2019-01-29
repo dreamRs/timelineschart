@@ -1,2 +1,4 @@
 ^timelineschart\.Rproj$
 ^\.Rproj\.user$
+^dev$
+^imgs$
