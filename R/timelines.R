@@ -23,6 +23,10 @@ timelines <- function(data, line_height = 12, width = NULL, height = NULL, eleme
         discrete = FALSE,
         data_label = "",
         label = ""
+      ),
+      time = list(
+        useUtc = FALSE,
+        format = "%Y-%m-%d %-I:%M:%S %p"
       )
     )
   )

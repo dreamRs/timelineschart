@@ -4,11 +4,11 @@
 \alias{set_scale}
 \title{Set scale for \code{timelines-chart}}
 \usage{
-set_scale(timevis, discrete = FALSE, palette = "Viridis",
+set_scale(timelines, discrete = FALSE, palette = "Viridis",
   domain = c(0, 1), data_label = "", label = "")
 }
 \arguments{
-\item{timevis}{A \code{timelines-chart} \code{htmlwidget} object.}
+\item{timelines}{A \code{timelines-chart} \code{htmlwidget} object.}
 
 \item{discrete}{Whether the segment data color values are categorical (false) or continuouss (true).}
 

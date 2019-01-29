@@ -1,7 +1,7 @@
 
 #' Set margins for \code{timelines-chart}
 #'
-#' @param timevis A \code{timelines-chart} \code{htmlwidget} object.
+#' @param timelines A \code{timelines-chart} \code{htmlwidget} object.
 #' @param left Chart's left margin, which contains the left-side group axis labels.
 #' @param right Chart's right margin, which contains the right-side series axis labels.
 #' @param bottom Chart's top margin, which contains the color legend.
@@ -9,9 +9,9 @@
 #'
 #' @export
 #'
-set_margins <- function(timevis, left = 90, right = 100, bottom = 26, top = 30) {
+set_margins <- function(timelines, left = 90, right = 100, bottom = 26, top = 30) {
   .timelines_opt(
-    timevis, "margins",
+    timelines, "margins",
     left = left,
     right = right,
     bottom = bottom,
@@ -22,7 +22,7 @@ set_margins <- function(timevis, left = 90, right = 100, bottom = 26, top = 30) 
 
 #' Set scale for \code{timelines-chart}
 #'
-#' @param timevis A \code{timelines-chart} \code{htmlwidget} object.
+#' @param timelines A \code{timelines-chart} \code{htmlwidget} object.
 #' @param discrete Whether the segment data color values are categorical (false) or continuouss (true).
 #' @param palette Color palette to use for continuous or colors vector.
 #' @param domain Range of values for continuous data.
@@ -31,9 +31,9 @@ set_margins <- function(timevis, left = 90, right = 100, bottom = 26, top = 30) 
 #'
 #' @export
 #'
-set_scale <- function(timevis, discrete = FALSE, palette = "Viridis", domain = c(0, 1), data_label = "", label = "") {
+set_scale <- function(timelines, discrete = FALSE, palette = "Viridis", domain = c(0, 1), data_label = "", label = "") {
   .timelines_opt(
-    timevis, "scale",
+    timelines, "scale",
     discrete = discrete,
     palette = palette,
     domain = domain,
@@ -43,3 +43,18 @@ set_scale <- function(timevis, discrete = FALSE, palette = "Viridis", domain = c
 }
 
 
+#' Set time options for \code{timelines-chart}
+#'
+#' @param timelines A \code{timelines-chart} \code{htmlwidget} object.
+#' @param use_utc Whether to display time in the local time zone (false) or in UTC (true).
+#' @param format Time format to use in tooltips. See \href{https://github.com/d3/d3-time-format#locale_format}{d3-time-format} for available options.
+#'
+#' @export
+#'
+set_time <- function(timelines, use_utc = FALSE, format = "%Y-%m-%d %-I:%M:%S %p") {
+  .timelines_opt(
+    timelines, "time",
+    useUTC = use_utc,
+    format = format
+  )
+}

@@ -34,6 +34,8 @@ HTMLWidgets.widget({
           .zDataLabel(x.options.scale.data_label)
           .zScaleLabel(x.options.scale.label)
           .zColorScale(colorScale)
+          .useUtc(x.options.time.useUTC)
+          .timeFormat(x.options.time.format)
           (document.getElementById(el.id));
 
       },
