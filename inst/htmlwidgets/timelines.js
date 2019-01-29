@@ -6,12 +6,18 @@ HTMLWidgets.widget({
 
   factory: function(el, width, height) {
 
+    var colorScale;
+
     return {
 
       renderValue: function(x) {
 
-        var colorScale = d3.scaleSequential(d3['interpolate' + x.options.scale.palette])
-          .domain(x.options.scale.domain);
+        if (x.options.scale.discrete) {
+          colorScale = d3.scaleOrdinal(x.options.scale.palette);
+        } else {
+          colorScale = d3.scaleSequential(d3['interpolate' + x.options.scale.palette])
+            .domain(x.options.scale.domain);
+        }
 
         const timelinesWidget = TimelinesChart();
 
