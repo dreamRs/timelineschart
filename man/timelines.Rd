@@ -4,7 +4,8 @@
 \alias{timelines}
 \title{<Add Title>}
 \usage{
-timelines(message, width = NULL, height = NULL, elementId = NULL)
+timelines(data, line_height = 12, width = NULL, height = NULL,
+  element_id = NULL)
 }
 \description{
 <Add Description>

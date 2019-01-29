@@ -2,24 +2,30 @@
 #'
 #' <Add Description>
 #'
-#' @importFrom htmlwidgets createWidget
+#' @importFrom htmlwidgets createWidget sizingPolicy
 #'
 #' @export
-timelines <- function(message, width = NULL, height = NULL, elementId = NULL) {
+timelines <- function(data, line_height = 12, width = NULL, height = NULL, element_id = NULL) {
 
-  # forward options using x
-  x = list(
-    message = message
+  config = list(
+    data = data
   )
 
-  # create widget
   htmlwidgets::createWidget(
     name = 'timelines',
-    x,
+    x = config,
     width = width,
     height = height,
     package = 'timelineschart',
-    elementId = elementId
+    elementId = element_id,
+    sizingPolicy = sizingPolicy(
+      defaultWidth = "100%",
+      viewer.defaultHeight = "100%",
+      viewer.defaultWidth = "100%",
+      knitr.figure = FALSE,
+      browser.fill = TRUE,
+      padding = 10
+    )
   )
 }
 
