@@ -1,0 +1,5 @@
+dependencies:
+  - name: timelines-chart
+    version: 2.8.0
+    src: htmlwidgets/lib
+    script: timelines-chart.min.js

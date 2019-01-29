@@ -1,0 +1,15 @@
+Package: timelineschart
+Title: Timelines Chart Htmlwidget
+Version: 0.0.0.9000
+Authors@R: c(
+      person("Victor", "Perrier", role = c("aut", "cre"), comment = "R interface", email = "victor.perrier@dreamRs.fr"),
+      person("Fanny", "Meyer", role = "aut", email = "fanny.meyer@dreamRs.fr"),
+      person("Vasco", "Asturiano", role = "cph", comment = "timelines-chart library in htmlwidgets/lib, https://github.com/vasturiano/timelines-chart")
+    )
+Description: What the package does (one paragraph).
+License: GPL-3 | file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    htmlwidgets
+RoxygenNote: 6.1.1
