@@ -13,7 +13,8 @@ HTMLWidgets.widget({
       renderValue: function(x) {
 
         if (x.options.scale.discrete) {
-          colorScale = d3.scaleOrdinal(x.options.scale.palette);
+          colorScale = d3.scaleOrdinal(x.options.scale.palette)
+            .domain(x.options.scale.domain);
         } else {
           colorScale = d3.scaleSequential(d3['interpolate' + x.options.scale.palette])
             .domain(x.options.scale.domain);

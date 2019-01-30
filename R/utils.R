@@ -78,3 +78,7 @@ parse_data <- function(data) {
 }
 
 
+
+dropNulls <- function(x) {
+  x[!vapply(x, is.null, FUN.VALUE = logical(1))]
+}

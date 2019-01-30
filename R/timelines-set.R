@@ -31,14 +31,20 @@ set_margins <- function(timelines, left = 90, right = 100, bottom = 26, top = 30
 #'
 #' @export
 #'
-set_scale <- function(timelines, palette = "Viridis", domain = c(0, 1), discrete = FALSE, data_label = "", label = "") {
-  .timelines_opt(
+set_scale <- function(timelines, palette = "Viridis", domain = NULL, discrete = NULL, data_label = NULL, label = NULL) {
+  if (!is.null(names(palette))) {
+    domain <- names(palette)
+    palette <- unlist(unname(palette))
+  }
+  .timelines_opt2(
     timelines, "scale",
-    discrete = discrete,
-    palette = palette,
-    domain = domain,
-    data_label = data_label,
-    label = label
+    l = dropNulls(list(
+      discrete = discrete,
+      palette = palette,
+      domain = domain,
+      data_label = data_label,
+      label = label
+    ))
   )
 }
 

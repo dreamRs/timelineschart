@@ -4,8 +4,8 @@
 \alias{set_scale}
 \title{Set scale for \code{timelines-chart}}
 \usage{
-set_scale(timelines, palette = "Viridis", domain = c(0, 1),
-  discrete = FALSE, data_label = "", label = "")
+set_scale(timelines, palette = "Viridis", domain = NULL,
+  discrete = NULL, data_label = NULL, label = NULL)
 }
 \arguments{
 \item{timelines}{A \code{timelines-chart} \code{htmlwidget} object.}

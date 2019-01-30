@@ -28,8 +28,14 @@ timelines <- function(data, line_height = 12, width = NULL, height = NULL, eleme
     if (!all(c("group", "label", "start", "end", "value") %in% names(data)))
       stop("data must contains columns: group, label, start, end, value", call. = FALSE)
     is_discrete <- !is.numeric(data$value)
-    if (!is_discrete)
+    if (is_discrete) {
+      domain <- unique(data$value)
+      palette <- c("#66C2A5", "#FC8D62", "#8DA0CB", "#E78AC3", "#A6D854", "#FFD92F",
+                   "#E5C494", "#B3B3B3")
+    } else {
       domain <- range(pretty(range(data$value, na.rm = TRUE)))
+      palette <- "Viridis"
+    }
     data <- parse_data(data)
 
   }
@@ -45,7 +51,7 @@ timelines <- function(data, line_height = 12, width = NULL, height = NULL, eleme
         bottom = 30
       ),
       scale = list(
-        palette = "Viridis",
+        palette = palette,
         domain = domain,
         discrete = is_discrete,
         data_label = "",
