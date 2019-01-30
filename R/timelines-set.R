@@ -64,3 +64,44 @@ set_time <- function(timelines, use_utc = FALSE, format = "%Y-%m-%d %-I:%M:%S %p
     format = format
   )
 }
+
+
+
+
+#' Set overview options for \code{timelines-chart}
+#'
+#' @param timelines A \code{timelines-chart} \code{htmlwidget} object.
+#' @param enable Whether to show an interactive timeline overview below the chart.
+#' @param domain The time extent shown in the overview section below the chart.
+#'
+#' @export
+#'
+set_overview <- function(timelines, enable = TRUE, domain = NULL) {
+  .timelines_opt(
+    timelines, "overview",
+    enable = enable,
+    domain = domain
+  )
+}
+
+
+
+#' Set zoom for \code{timelines-chart}
+#'
+#' @param timelines A \code{timelines-chart} \code{htmlwidget} object.
+#' @param x Chart's time (horizontal) zoom. A null value indicates a zoom reset to full extent.
+#' @param y Chart's vertical zoom. The parameter should follow the syntax \code{c("<start row index>", "<end row index>")}.
+#'  A null value indicates a zoom reset to full extent.
+#'
+#' @export
+#'
+set_zoom <- function(timelines, x = NULL, y = NULL) {
+  .timelines_opt2(
+    timelines, "zoom",
+    l = dropNulls(list(
+      x = x,
+      y = y
+    ))
+  )
+}
+

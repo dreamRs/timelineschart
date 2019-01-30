@@ -60,6 +60,14 @@ timelines <- function(data, line_height = 12, width = NULL, height = NULL, eleme
       time = list(
         useUtc = FALSE,
         format = "%Y-%m-%d %-I:%M:%S %p"
+      ),
+      overview = list(
+        enable = TRUE,
+        domain = NULL
+      ),
+      zoom = list(
+        x = NULL,
+        y = NULL
       )
     )
   )

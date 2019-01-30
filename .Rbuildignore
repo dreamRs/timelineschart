@@ -1,3 +1,4 @@
+^data-raw$
 ^\.travis\.yml$
 ^timelineschart\.Rproj$
 ^\.Rproj\.user$

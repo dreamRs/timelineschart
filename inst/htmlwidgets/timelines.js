@@ -37,7 +37,27 @@ HTMLWidgets.widget({
           .zColorScale(colorScale)
           .useUtc(x.options.time.useUTC)
           .timeFormat(x.options.time.format)
+          .enableOverview(x.options.overview.enable);
+
+        timelinesWidget
           (document.getElementById(el.id));
+
+        if (x.options.zoom.x !== null) {
+          var minZoom = new Date(x.options.zoom.x[0]);
+          var maxZoom = new Date(x.options.zoom.x[1]);
+          timelinesWidget.zoomX([minZoom, maxZoom]);
+        }
+        if (x.options.zoom.y !== null) {
+          timelinesWidget.zoomY(x.options.zoom.y);
+        }
+
+        if (x.options.overview.domain !== null) {
+          //console.log(timelinesWidget.overviewDomain());
+          var minTs = new Date(x.options.overview.domain[0]);
+          var maxTs = new Date(x.options.overview.domain[1]);
+          timelinesWidget
+            .overviewDomain([minTs, maxTs]);
+        }
 
       },
 
