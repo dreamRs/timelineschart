@@ -2,6 +2,8 @@
 
 > R interface to [timelines-chart](https://github.com/vasturiano/timelines-chart)
 
+[![Travis build status](https://travis-ci.org/dreamRs/timelineschart.svg?branch=master)](https://travis-ci.org/dreamRs/timelineschart)
+
 
 ## Installation
 

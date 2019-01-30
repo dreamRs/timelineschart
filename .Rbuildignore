@@ -1,3 +1,4 @@
+^\.travis\.yml$
 ^timelineschart\.Rproj$
 ^\.Rproj\.user$
 ^dev$
