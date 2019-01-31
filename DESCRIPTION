@@ -1,6 +1,6 @@
 Package: timelineschart
 Title: Timelines Chart Htmlwidget
-Version: 0.1.0.900
+Version: 0.1.0.910
 Authors@R: c(
       person("Victor", "Perrier", role = c("aut", "cre"), comment = "R interface", email = "victor.perrier@dreamRs.fr"),
       person("Fanny", "Meyer", role = "aut", email = "fanny.meyer@dreamRs.fr"),

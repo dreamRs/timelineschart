@@ -8,6 +8,8 @@ HTMLWidgets.widget({
 
     var colorScale;
 
+    const timelinesWidget = TimelinesChart();
+
     return {
 
       renderValue: function(x) {
@@ -19,8 +21,6 @@ HTMLWidgets.widget({
           colorScale = d3.scaleSequential(d3['interpolate' + x.options.scale.palette])
             .domain(x.options.scale.domain);
         }
-
-        const timelinesWidget = TimelinesChart();
 
         timelinesWidget
           .data(x.data)
@@ -61,6 +61,10 @@ HTMLWidgets.widget({
 
       },
 
+      getChart: function() {
+        return timelinesWidget;
+      },
+
       resize: function(width, height) {
 
       }
@@ -68,3 +72,38 @@ HTMLWidgets.widget({
     };
   }
 });
+
+// From Friss tuto (https://github.com/FrissAnalytics/shinyJsTutorials/blob/master/tutorials/tutorial_03.Rmd)
+function get_timelines(id){
+
+  // Get the HTMLWidgets object
+  var htmlWidgetsObj = HTMLWidgets.find("#" + id);
+
+  // Use the getChart method we created to get the underlying billboard chart
+  var timelinesObj ;
+
+  if (typeof htmlWidgetsObj != 'undefined') {
+    timelinesObj = htmlWidgetsObj.getChart();
+  }
+
+  return(timelinesObj);
+}
+
+if (HTMLWidgets.shinyMode) {
+
+  Shiny.addCustomMessageHandler('update-timelines-zoom',
+    function(message) {
+      var timelinesWidget = get_timelines(message.id);
+      if (typeof timelinesWidget != 'undefined') {
+        if (message.data.x !== null) {
+          var minZoom = new Date(message.data.x[0]);
+          var maxZoom = new Date(message.data.x[1]);
+          timelinesWidget.zoomX([minZoom, maxZoom]);
+        }
+        if (message.data.y !== null) {
+          timelinesWidget.zoomY(message.data.y);
+        }
+      }
+  });
+
+}
