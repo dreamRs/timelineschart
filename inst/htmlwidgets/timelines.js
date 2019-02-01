@@ -106,4 +106,12 @@ if (HTMLWidgets.shinyMode) {
       }
   });
 
+  Shiny.addCustomMessageHandler('update-timelines-data',
+    function(message) {
+      var timelinesWidget = get_timelines(message.id);
+      if (typeof timelinesWidget != 'undefined') {
+        timelinesWidget.data(message.data.newData);
+      }
+  });
+
 }

@@ -54,3 +54,39 @@ timelinesProxy <- function(shinyId, session = shiny::getDefaultReactiveDomain())
 
   proxy
 }
+
+
+
+
+
+
+#' Update data for \code{timelines-chart} with proxy
+#'
+#' @param timelines  A \code{timelines-chart} \code{proxy} object.
+#' @param data A \code{data.frame}, see \code{\link{timelines}} for details.
+#'
+#' @export
+#'
+update_data <- function(timelines, data) {
+  if (is.data.frame(data)) {
+    if (!all(c("group", "label", "start", "end", "value") %in% names(data)))
+      stop("data must contains columns: group, label, start, end, value", call. = FALSE)
+    data <- parse_data(data)
+
+  }
+  .timelines_proxy(timelines, "data", newData = data)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
