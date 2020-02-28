@@ -4,8 +4,7 @@
 \alias{set_margins}
 \title{Set margins for \code{timelines-chart}}
 \usage{
-set_margins(timelines, left = 90, right = 100, bottom = 26,
-  top = 30)
+set_margins(timelines, left = 90, right = 100, bottom = 26, top = 30)
 }
 \arguments{
 \item{timelines}{A \code{timelines-chart} \code{htmlwidget} object.}

@@ -4,8 +4,13 @@
 \alias{timelines}
 \title{Timelines chart}
 \usage{
-timelines(data, line_height = 12, width = NULL, height = NULL,
-  element_id = NULL)
+timelines(
+  data,
+  line_height = 12,
+  width = NULL,
+  height = NULL,
+  element_id = NULL
+)
 }
 \arguments{
 \item{data}{A \code{data.frame} (see details) or a list.}

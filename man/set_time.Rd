@@ -4,8 +4,7 @@
 \alias{set_time}
 \title{Set time options for \code{timelines-chart}}
 \usage{
-set_time(timelines, use_utc = FALSE,
-  format = "\%Y-\%m-\%d \%-I:\%M:\%S \%p")
+set_time(timelines, use_utc = FALSE, format = "\%Y-\%m-\%d \%-I:\%M:\%S \%p")
 }
 \arguments{
 \item{timelines}{A \code{timelines-chart} \code{htmlwidget} object.}
