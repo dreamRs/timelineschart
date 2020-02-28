@@ -71,7 +71,8 @@ HTMLWidgets.widget({
       },
 
       resize: function(width, height) {
-
+        timelinesWidget
+          .width(width);
       }
 
     };
