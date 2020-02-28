@@ -81,8 +81,9 @@ timelines <- function(data, line_height = 12, width = NULL, height = NULL, eleme
     elementId = element_id,
     sizingPolicy = sizingPolicy(
       defaultWidth = "100%",
-      viewer.defaultHeight = "100%",
       viewer.defaultWidth = "100%",
+      viewer.defaultHeight = "100%",
+      viewer.fill = TRUE,
       knitr.figure = FALSE,
       browser.fill = TRUE,
       padding = 10

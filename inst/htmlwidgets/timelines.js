@@ -22,10 +22,15 @@ HTMLWidgets.widget({
             .domain(x.options.scale.domain);
         }
 
+        var maxHeight = height;
+        if (x.options.overview.enable) {
+          maxHeight = height - 50;
+        }
+
         timelinesWidget
           .data(x.data)
           .width(width)
-          .maxHeight(height)
+          .maxHeight(maxHeight)
           .maxLineHeight(x.options.maxLineHeight)
           .leftMargin(x.options.margins.left)
           .rightMargin(x.options.margins.right)
