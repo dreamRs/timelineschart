@@ -2,8 +2,10 @@
 
 > R interface to [timelines-chart](https://github.com/vasturiano/timelines-chart)
 
+<!-- badges: start -->
 [![Travis build status](https://travis-ci.org/dreamRs/timelineschart.svg?branch=master)](https://travis-ci.org/dreamRs/timelineschart)
-
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+<!-- badges: end -->
 
 ## Installation
 
@@ -35,6 +37,6 @@ timelines(data = planning, line_height = 24) %>%
   set_time(use_utc = TRUE)
 ```
 
-![](imgs/timelines.png)
+![](man/figures/timelines.png)
 
 
