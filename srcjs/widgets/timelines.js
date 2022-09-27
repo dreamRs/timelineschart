@@ -18,6 +18,8 @@ HTMLWidgets.widget({
 
       renderValue: function(x) {
 
+        el.innerHTML = "";
+
         if (x.options.scale.discrete) {
           colorScale = d3.scaleOrdinal(x.options.scale.palette)
             .domain(x.options.scale.domain);
