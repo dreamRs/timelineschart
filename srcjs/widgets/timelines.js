@@ -1,4 +1,5 @@
-import "widgets";
+import "widgets"
+import * as d3 from "d3";
 import TimelinesChart from "timelines-chart";
 
 HTMLWidgets.widget({

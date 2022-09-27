@@ -26,6 +26,7 @@
   "homepage": "https://github.com/dreamRs/timelineschart#readme",
   "devDependencies": {
     "css-loader": "^6.7.1",
+    "d3": "^7.6.1",
     "style-loader": "^3.3.1",
     "timelines-chart": "^2.11.5",
     "webpack": "^5.74.0",
