@@ -7,7 +7,7 @@
 update_data(timelines, data)
 }
 \arguments{
-\item{timelines}{A \code{timelines-chart} \code{proxy} object.}
+\item{timelines}{A [timelines_proxy()] \code{proxy} object.}
 
 \item{data}{A \code{data.frame}, see \code{\link{timelines}} for details.}
 }

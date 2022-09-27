@@ -1,4 +1,6 @@
-#' Proxy for \code{timelines-chart}
+#' @title Proxy for `timelines`
+#'
+#' @description Proxy to interact with an existing [timelines()] chart in Shiny.
 #'
 #' @param shinyId single-element character vector indicating the output ID of the
 #'   chart to modify (if invoked from a Shiny module, the namespace will be added
@@ -7,8 +9,8 @@
 #'   default value will suffice.
 #'
 #' @export
-#'
-timelinesProxy <- function(shinyId, session = shiny::getDefaultReactiveDomain()) {
+#' @importFrom shiny getDefaultReactiveDomain
+timelines_proxy <- function(shinyId, session = shiny::getDefaultReactiveDomain()) {
 
   if (is.null(session)) {
     stop("timelinesProxy must be called from the server function of a Shiny app")
@@ -62,7 +64,7 @@ timelinesProxy <- function(shinyId, session = shiny::getDefaultReactiveDomain())
 
 #' Update data for \code{timelines-chart} with proxy
 #'
-#' @param timelines  A \code{timelines-chart} \code{proxy} object.
+#' @param timelines  A [timelines_proxy()] \code{proxy} object.
 #' @param data A \code{data.frame}, see \code{\link{timelines}} for details.
 #'
 #' @export

@@ -1,7 +1,7 @@
-#' An \code{htmlwidget} interface to the
+#' An `htmlwidget` interface to the
 #' timelines-chart javascript chart library
 #'
-#' This package allow you to use timelines-chart (\url{https://github.com/vasturiano/timelines-chart}),
+#' This package allow you to use [timelines-chart](https://github.com/vasturiano/timelines-chart) JavaScript library,
 #' a parallel timelines layout (swimlanes) for representing state of time-series over time.
 #'
 #' @name timelines-package

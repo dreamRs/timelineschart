@@ -13,7 +13,7 @@ timelines(
 )
 }
 \arguments{
-\item{data}{A \code{data.frame} (see details) or a list.}
+\item{data}{A [data.frame()] (see details) or a list.}
 
 \item{line_height}{Maximum height of each line, in px.}
 
@@ -22,18 +22,16 @@ timelines(
 \item{element_id}{A custom id for the widget.}
 }
 \description{
-Timelines chart
+Create timelines charts with JavaScript library [timelines-chart](https://github.com/vasturiano/timelines-chart).
 }
 \details{
 Data format
 
-If a \code{data.frame} is used, it must contains the following columns:
+If a [data.frame()] is used, it must contains the following columns:
 
-\describe{
-  \item{group}{Name of the group, used in left-side of the timelines chart.}
-  \item{label}{Label for the line.}
-  \item{start}{Start of the event.}
-  \item{end}{End of the event.}
-  \item{value}{Value to be represented, can be continuous or discrete.}
- }
+ * group: Name of the group, used in left-side of the timelines chart.
+ * label: Label for the line.
+ * start: Start of the event.
+ * end: End of the event.
+ * value: Value to be represented, can be continuous or discrete.
 }
