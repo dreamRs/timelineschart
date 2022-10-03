@@ -3,13 +3,13 @@
 > R interface to [timelines-chart](https://github.com/vasturiano/timelines-chart)
 
 <!-- badges: start -->
-[![Travis build status](https://travis-ci.org/dreamRs/timelineschart.svg?branch=master)](https://travis-ci.org/dreamRs/timelineschart)
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![R-CMD-check](https://github.com/dreamRs/timelineschart/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/dreamRs/timelineschart/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 ## Installation
 
-You can install from GitHub with:
+You can install from [GitHub](https://github.com/dreamRs/timelineschart) with:
 
 ``` r
 remotes::install_github("dreamRs/timelineschart")
